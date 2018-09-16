@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+package com.mattie.grpc;
+
+option java_package = "com.mattie.grpc";
+option java_outer_classname = "HelloWorldProtos";
+
+service Greeter {
+  rpc SayHello (HelloRequest) returns (HelloReply) {}
+}
+
+message HelloRequest {
+  string message = 1;
+}
+
+message HelloReply {
+  string message = 1;
+}
