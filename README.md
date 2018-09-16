@@ -133,7 +133,7 @@ simple grpc demo with server and client
   
  3. 使用`stub`像调用本地方法一样调用远程服务
 
-      public class MyClient {
+            public class MyClient {
 
           public static void main(String[] args) {
               //使用usePlaintext，否则使用加密连接
@@ -143,8 +143,8 @@ simple grpc demo with server and client
               GreeterGrpc.GreeterBlockingStub blockingStub = GreeterGrpc.newBlockingStub(channel);
               HelloWorldProtos.HelloReply helloReply = blockingStub.sayHello(HelloWorldProtos.HelloRequest.newBuilder().setMessage("hello wolrd").build());
               System.out.println(helloReply.getMessage());
+            }
           }
-      }
 
 
 
