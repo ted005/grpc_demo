@@ -146,7 +146,8 @@ simple grpc demo with server and client
             }
           }
 
-
+> 注：clone仓库后，运行`gradle clean build`生成build文件夹，并将`main`目录设置为`source root`。
+![main目录设置为Sources](https://upload-images.jianshu.io/upload_images/420187-71fdbbfc9d3c29c4.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 
 
