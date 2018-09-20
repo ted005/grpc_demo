@@ -146,8 +146,9 @@ simple grpc demo with server and client
             }
           }
 
-> 注：clone仓库后，运行`gradle clean build`生成build文件夹，并将`main`目录设置为`source root`。
+> 注：1. clone仓库后，运行`gradle clean build`生成build文件夹，并将`main`目录设置为`source root`。
 ![main目录设置为Sources](https://upload-images.jianshu.io/upload_images/420187-71fdbbfc9d3c29c4.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+      2. `.proto`文件默认需要放在`src/main/proto`下面，否则无法生成代码。另外可以自定义存放目录：![自定义.proto文件的存放目录](https://upload-images.jianshu.io/upload_images/420187-b127d6dc2898645a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 
 
