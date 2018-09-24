@@ -12,4 +12,25 @@ public class MyService extends GreeterImplBase {
         responseObserver.onNext(helloReply);
         responseObserver.onCompleted();
     }
+
+    @Override
+    public StreamObserver<HelloStreamRequest> biStream(StreamObserver<HelloStreamResponse> responseObserver) {
+        return new StreamObserver<HelloStreamRequest>() {
+            @Override
+            public void onNext(HelloStreamRequest value) {
+                System.out.println("client says: " + value.getRequestInfo());
+                responseObserver.onNext(HelloStreamResponse.newBuilder().setResponseInfo("hello client").build());
+            }
+
+            @Override
+            public void onError(Throwable t) {
+
+            }
+
+            @Override
+            public void onCompleted() {
+                responseObserver.onCompleted();
+            }
+        };
+    }
 }

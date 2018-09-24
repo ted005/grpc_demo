@@ -7,6 +7,8 @@ option java_outer_classname = "HelloWorldProtos";
 
 service Greeter {
   rpc SayHello (HelloRequest) returns (HelloReply) {}
+
+  rpc biStream (stream HelloStreamRequest) returns (stream HelloStreamResponse) {};
 }
 
 message HelloRequest {
@@ -15,4 +17,12 @@ message HelloRequest {
 
 message HelloReply {
   string message = 1;
+}
+
+message HelloStreamRequest {
+  string request_info = 1;
+}
+
+message HelloStreamResponse {
+  string response_info = 1;
 }
